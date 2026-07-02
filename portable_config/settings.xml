@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <InputDefaultBindingsFixApplied>true</InputDefaultBindingsFixApplied>
+    <ShowMenuFixApplied>true</ShowMenuFixApplied>
+    <MenuUpdateVersion>0</MenuUpdateVersion>
+    <Volume>94</Volume>
+    <RecentFiles>
+        <string>C:\Users\docxwang\Desktop\MapleAudioDesign\GamePlay\【4.15】空间音频脚步声测试\V2\BuildingB外部.mp4</string>
+        <string>C:\Users\docxwang\Desktop\MapleAudioDesign\GamePlay\【4.15】空间音频脚步声测试\V2\BuildingB内部.mp4</string>
+        <string>C:\Users\docxwang\Desktop\MapleAudioDesign\GamePlay\【4.15】空间音频脚步声测试\V2\BuildingA内部.mp4</string>
+        <string>C:\Users\docxwang\Desktop\缩毒的声音BUG.mp4</string>
+        <string>C:\Users\docxwang\Desktop\Ada通用语音\行者3.wav</string>
+        <string>C:\Users\docxwang\Desktop\Ada通用语音\行者2.wav</string>
+        <string>C:\Users\docxwang\Desktop\Ada通用语音\行者1.wav</string>
+        <string>C:\Users\docxwang\Desktop\优化方案.png</string>
+        <string>C:\Users\docxwang\Desktop\事件分发器用法学习.png</string>
+        <string>C:\Users\docxwang\Desktop\PVE语音Ada7.1\VO_NPC_PVE_Ada_12.wav</string>
+        <string>C:\Users\docxwang\Desktop\PVE语音Ada7.1\VO_NPC_PVE_Ada_11.wav</string>
+        <string>C:\Users\docxwang\Desktop\PVE语音Ada7.1\VO_NPC_PVE_Ada_10.wav</string>
+        <string>C:\Users\docxwang\Desktop\PVE语音Ada7.1\VO_NPC_PVE_Ada_13.wav</string>
+        <string>C:\Users\docxwang\Desktop\PVE语音Ada7.1\VO_NPC_PVE_Ada_16.wav</string>
+        <string>C:\Users\docxwang\Desktop\PVE语音Ada7.1\VO_NPC_PVE_Ada_15.wav</string>
+    </RecentFiles>
+    <WindowLocation>
+        <X>0</X>
+        <Y>1</Y>
+    </WindowLocation>
+    <WindowPosition>
+        <X>5764</X>
+        <Y>1914</Y>
+    </WindowPosition>
+    <WindowSize>
+        <Width>2237</Width>
+        <Height>1258</Height>
+    </WindowSize>
+    <AudioDevice />
+    <ConfigEditorSearch>Video:</ConfigEditorSearch>
+    <Mute>no</Mute>
+    <StartupFolder />
+</AppSettings>

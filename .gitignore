@@ -1,0 +1,32 @@
+# ==== mpv.net 主程序（体积大 + 版权，走 Release 分发） ====
+mpvnet.exe
+mpvnet.com
+mpvnet.dll
+mpvnet.deps.json
+mpvnet.runtimeconfig.json
+mpvnet.dll.config
+libmpv-2.dll
+libmpvnet.dll
+ffmpeg.exe
+MediaInfo.dll
+CommunityToolkit.Mvvm.dll
+Microsoft.Xaml.Behaviors.dll
+NGettext.dll
+NGettext.Wpf.dll
+Locale/
+
+# ==== 卸载器 ====
+unins000.exe
+unins000.dat
+
+# ==== 运行时生成的缓存 / 播放记录 ====
+portable_config/cache/
+portable_config/watch_later/
+portable_config/*.log
+
+# ==== 系统 / 编辑器 ====
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+.history/
