@@ -12,7 +12,7 @@
 2. 解压到任意目录
 3. 双击 `mpvnet.exe`，或把视频拖到图标上
 
-> 只想要配置？clone 本仓库，把 `portable_config/` 拷进自己的 mpv.net 目录即可。
+> 如果想要 clone 本仓库，把 `portable_config/` 拷进自己的 mpv.net 目录即可。
 
 ---
 
@@ -21,7 +21,7 @@
 | | |
 |---|---|
 | **强内核** | mpv 0.41，支持 MKV / H.265 / HDR / 10bit / VP9 / AV1 / FLAC / DTS / Atmos |
-| **高画质** | `gpu-hq` + NVIDIA `nvdec` 硬解，默认就比 PotPlayer 好看一档 |
+| **高画质** | `gpu-hq` + NVIDIA `nvdec` 硬解 |
 | **现代 UI** | uosc 皮肤，鼠标移到底部自动出控制栏 |
 | **无损切片** | `h / k / e` 三键导出片段，`-c copy` 不重编码 |
 | **便携** | 全部配置在 `portable_config/`，不写注册表 |
@@ -77,7 +77,7 @@
 
 > 列表打开时方向键用于导航；关闭后恢复跳转功能。
 
-### 无损切片（本版核心）
+### 无损切片
 
 | 键 | 作用 |
 |---|---|
@@ -88,28 +88,28 @@
 | `t` | 切换是否剥离元数据 |
 
 **导出位置**：源文件同目录，自动编号 `原文件名 1.mp4` / `原文件名 2.mp4`
-**限制**：视频起点必须落在关键帧上，会自动回落到最近的 I 帧；音频不受影响。要精确到帧就得重编码，那就不叫无损了。
+**限制**：视频起点必须落在关键帧上，会自动回落到最近的 I 帧；音频不受影响。要精确到帧就得重编码，就不无损了。
 
 ---
 
 ## 常见问题
 
-**Q. 打开视频黑屏 / 花屏？**
+**Q. 打开视频黑屏 / 花屏：**
 显卡驱动和 nvdec 不兼容。编辑 `portable_config/mpv.conf`，把 `hwdec=nvdec` 改成 `hwdec=no`。
 
-**Q. 想记住上次播放位置？**
+**Q. 想记住上次播放位置：**
 `portable_config/mpv.conf` 里 `save-position-on-quit=no` 改成 `yes`。
 
-**Q. 按 `e` 没反应 / 报 Subprocess failed？**
+**Q. 按 `e` 没反应 / 报 Subprocess failed：**
 检查 `mpvnet.exe` 同目录是否有 `ffmpeg.exe`。脚本查找顺序：主程序目录 → `portable_config/` → 系统 PATH。
 
-**Q. 底部控制栏不见了？**
+**Q. 底部控制栏不见了：**
 鼠标移到窗口下 1/4 区域自动弹出，3 秒不动自动隐藏。
 
-**Q. 想换 mpv 官方 OSC？**
+**Q. 想换 mpv 官方 OSC：**
 `mpv.conf` 里 `osc=no` 改成 `osc=yes`，然后把 `portable_config/scripts/uosc/` 删掉或改名。
 
-**Q. 想改字幕字体 / 大小 / 颜色？**
+**Q. 想改字幕字体 / 大小 / 颜色：**
 编辑 `mpv.conf` 里 `sub-*` 相关项，重启生效。
 
 ---
@@ -152,7 +152,7 @@ mpv.net/
 
 ---
 
-## 反馈 / 更强的 ffmpeg
+## 更强的 ffmpeg
 
 需要更多编码器：从 [gyan.dev](https://www.gyan.dev/ffmpeg/builds/) 下 full-shared 版覆盖 `ffmpeg.exe`。
 
