@@ -19,10 +19,13 @@ Locale/
 unins000.exe
 unins000.dat
 
-# ==== 运行时生成的缓存 / 播放记录 ====
+# ==== 运行时生成的缓存 / 播放记录 / 私人状态 ====
 portable_config/cache/
 portable_config/watch_later/
 portable_config/*.log
+# settings.xml 包含 RecentFiles、窗口位置、上次音量等运行时状态，
+# 会泄露本地路径和用户名，绝不能入库；mpv.net 启动会自动重建。
+portable_config/settings.xml
 
 # ==== 系统 / 编辑器 ====
 Thumbs.db
