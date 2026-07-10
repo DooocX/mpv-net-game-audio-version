@@ -929,6 +929,53 @@ LoadWatchedSet() {
     } catch {
         gWatchedSet := Map()
     }
+
+    ; 清理失效条目：文件已被删/移走的从记录里踢出去
+    ; 只在检测到失效项时才回写磁盘，避免每次启动无谓写文件
+    PruneWatchedSet()
+}
+
+; 清理策略：
+;   1. 文件已不存在（被删/移走/换盘符）→ 移除
+;   2. 总数超过 5000 条（防无限膨胀）→ 只截留最近的 5000 条（Map 天然按插入序）
+PruneWatchedSet() {
+    global gWatchedSet, gWatchedFile
+    if !IsSet(gWatchedSet) || gWatchedSet.Count = 0
+        return
+
+    removed := 0
+    deadKeys := []
+    for k, _ in gWatchedSet {
+        ; NormPath 存的是归一化路径（大写盘符 + 反斜杠），FileExist 能直接吃
+        if !FileExist(k)
+            deadKeys.Push(k)
+    }
+    for k in deadKeys {
+        gWatchedSet.Delete(k)
+        removed++
+    }
+
+    ; 硬上限
+    MAX_KEEP := 5000
+    if gWatchedSet.Count > MAX_KEEP {
+        overflow := gWatchedSet.Count - MAX_KEEP
+        cutKeys := []
+        idx := 0
+        for k, _ in gWatchedSet {
+            idx++
+            if idx <= overflow
+                cutKeys.Push(k)
+            else
+                break
+        }
+        for k in cutKeys {
+            gWatchedSet.Delete(k)
+            removed++
+        }
+    }
+
+    if removed > 0
+        SaveWatchedSet()
 }
 
 SaveWatchedSet() {

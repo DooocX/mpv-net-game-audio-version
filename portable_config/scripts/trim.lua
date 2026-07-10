@@ -264,8 +264,8 @@ local function getTrimmingPositionsText()
         return formatted
     end
 
-    return "Trimming: " .. tostring(formatSeconds(startPosition, true)) ..
-               " secs ~ " .. tostring(formatSeconds(endPosition, true)) ..
+    return "Trimming: " .. tostring(formatSeconds(startPosition)) ..
+               " secs ~ " .. tostring(formatSeconds(endPosition)) ..
                " secs"
 end
 
@@ -348,6 +348,7 @@ function writeOut()
         endPosition == "none" then
         message = "trim: Error - Start or End Position is unassigned."
         mp.osd_message(message, 3)
+        return
     end
 
     if startPosition == endPosition then
